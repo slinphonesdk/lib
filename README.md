@@ -1,5 +1,8 @@
 Simple Linphone SDK for android
 ===============================
+version:<br>
+1.0.2<br>
+1.0.3<br>
 // 添加依赖<br>
 ----------------
 1.工程gradle.allprojects.repositories添加<br>
