@@ -1,13 +1,14 @@
 Simple Linphone SDK for android
-
+===============================
 // 添加依赖
 1.工程gradle.allprojects.repositories添加
+-----------------------------------------
         maven { url "https://github.com/slinphonesdk/lib/raw/master" }
 2.项目gradle.dependencies添加
+-----------------------------
     implementation 'com.android:lib:1.0.3'
-
-
-
+// 示例
+'''Java
 SLinphoneSDK.init(this,"192.168.88.253", "5060");
         SLinphoneSDK.getInstance().addSDKListener(new SLinphoneSDKListener() {
             @Override
@@ -29,4 +30,4 @@ SLinphoneSDK.init(this,"192.168.88.253", "5060");
         SLinphoneSDK.callOutgoing("19999");//拔打电话
         SLinphoneSDK.acceptCall();//接听电话
         SLinphoneSDK.hangup();//挂断电话
-
+'''
