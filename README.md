@@ -1,11 +1,9 @@
 Simple Linphone SDK for android
 ===============================
 * version:<br>
-	* 1.0.2<br>
-	* 1.0.3<br>
-	* 1.0.4<br>
+* 1.0.7<br>
 ---------------------
-new: 自动接听
+new: 删除无效文件
 ---------------------
 // 添加依赖<br>
 ----------------
@@ -15,7 +13,7 @@ new: 自动接听
 ```
 2.项目gradle.dependencies添加<br>
 ```   
- implementation 'com.android:lib:1.0.4'
+ implementation 'com.android:lib:1.0.7'
 ```
 // 示例<br>
 ----------
