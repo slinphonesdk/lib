@@ -1,9 +1,9 @@
 Simple Linphone SDK for android
 ===============================
 * version:<br>
-* 1.0.7<br>
+* 1.1.1.4<br>
 ---------------------
-new: 删除无效文件
+new: 删除UI文件
 ---------------------
 // 添加依赖<br>
 ----------------
@@ -18,25 +18,18 @@ new: 删除无效文件
 // 示例<br>
 ----------
 ```
-SLinphoneSDK.init(this,"192.168.88.253", "5060");
-SLinphoneSDK.getInstance().addSDKListener(new SLinphoneSDKListener() {
+sLinPhoneSDK = new SLinPhoneSDK(this, ipEt.getText().toString().trim(), 5060, new RLinkPhoneListener() {
             @Override
-            public void serviceIsReady() {
-                SLinphoneSDK.register("199998");
+            public void callState(String from, int state, String s) {
+                regMsg = s;
+                updateUI();
             }
 
             @Override
-            public void callState(String s, String s1, String s2) {
-
-            }
-
-            @Override
-            public void registrationState(String s, String s1) {
-
+            public void registrationState(String state, String s) {
+                stateTv.setText("  注册状态: "+state);
             }
         });
-        
-        SLinphoneSDK.callOutgoing("19999");//拔打电话
-        SLinphoneSDK.acceptCall();//接听电话
-        SLinphoneSDK.hangup();//挂断电话
+        sLinPhoneSDK.register("100100");
+        sLinPhoneSDK.isAutoAnswer(false);
 ```
